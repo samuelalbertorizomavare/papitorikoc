@@ -29,7 +29,8 @@ jobs:
         pyinstaller --onefile --noconsole launcher.py
 
     - name: Upload executable as artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3  # Actualiza a la nueva versión
       with:
         name: minecraft-launcher
         path: dist/launcher.exe
+

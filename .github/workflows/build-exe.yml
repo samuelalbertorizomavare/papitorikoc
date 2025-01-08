@@ -27,10 +27,12 @@ jobs:
     - name: Build executable with PyInstaller
       run: |
         pyinstaller --onefile --noconsole launcher.py
+        ls -la dist/  # Listar los archivos en la carpeta dist para verificar la existencia de launcher.exe
 
     - name: Upload executable as artifact
-      uses: actions/upload-artifact@v3  # Actualiza a la nueva versión
+      uses: actions/upload-artifact@v3
       with:
         name: minecraft-launcher
         path: dist/launcher.exe
+
 
